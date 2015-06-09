@@ -51,11 +51,7 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
         mLeftSide = mView.findViewById(R.id.notification_icon_area);
         mTraffic = mView.findViewById(R.id.traffic);
         mStatusIcons = mView.findViewById(R.id.statusIcons);
-        if (TelephonyManager.getDefault().isMultiSimEnabled()) {
-            mSignalCluster = mView.findViewById(R.id.msim_signal_cluster);
-        } else {
-            mSignalCluster = mView.findViewById(R.id.signal_cluster);
-        }
+        mSignalCluster = mView.findViewById(R.id.signal_cluster);
         mBattery = mView.findViewById(R.id.battery);
         mClock = mView.findViewById(R.id.clock);
         applyModeBackground(-1, getMode(), false /*animate*/);
